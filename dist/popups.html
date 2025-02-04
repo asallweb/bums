@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Popups</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250203124156">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250203124156" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="__container">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="/">
+							<img src="img/logotypes/logo.webp" class="header__logo-src" alt="BUMS Logo">
+						</a>
+					</div>
+					<div class="header__menu menu">
+						<div class="basket-mobile-placeholder"></div>
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="" class="menu__link">NFT Collections</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Merch Market</a></li>
+								<li class="menu__item"><a href="" class="menu__link">News and Community</a></li>
+								<li class="menu__item"><a href="" class="menu__link _wallet">
+										<img src="img/icons/wallet.svg" class="menu__link-src">
+										Connect your wallet
+									</a></li>
+								<li class="menu__item _basket">
+									<a href="" class="menu__link _basket" data-da=".basket-mobile-placeholder, 767.98">
+										<img src="img/icons/basket.svg" class="menu__link-src">
+										<div class="menu__link-count">6</div>
+									</a>
+								</li>
+								<li class="menu__item _lang">
+									<a href="" class="menu__link _lang">
+										<img src="img/icons/language.svg" class="menu__link-src">
+										<span class="menu__link-lang-desktop">En</span>
+										<span class="menu__link-lang-mobile">English</span>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div style="display: flex; gap: 20px; margin: 100px auto;	justify-content: center;">
+			<a href="" data-popup="#popup-1" class="nft-detail__button button">Popup 1</a>
+			<a href="" data-popup="#popup-2" class="nft-detail__button button">Popup 2</a>
+			<a href="" data-popup="#popup-3" class="nft-detail__button button">Popup 3</a>
+			<a href="" data-popup="#popup-4" class="nft-detail__button button">Popup 4</a>
+			</div>
+			<div id="popup-1" aria-hidden="true" class="popup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<div class="popup__title">
+							<span>Buy NFT</span>
+							<button data-close type="button" class="popup__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+									<path d="M10.1111 0.500001L13 3.38889L2.88889 13.5L4.6614e-07 10.6111L10.1111 0.500001Z" fill="#6D879A" />
+									<path d="M13 10.6111L10.1111 13.5L0 3.38889L2.88889 0.5L13 10.6111Z" fill="#6D879A" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup__text">
+							<div class="nft-popup">
+								<div class="nft-popup__head">
+									<div class="nft-popup__head-image _violet">
+										<div class="nft-popup__head-image-text">?</div>
+									</div>
+									<div class="nft-popup__head-content">
+										<div class="nft-popup__head-title">BUMS hat</div>
+										<div class="nft-popup__head-subtitle">BUMS hat Collection</div>
+									</div>
+								</div>
+								<div class="nft-popup__content">
+									<div class="nft-popup__content-title">NFT Price</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Includes service fee and creator</div>
+										<div class="nft-popup__content-col"><span class="_big">0.35 TON</span></div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Creator Royalties</div>
+										<div class="nft-popup__content-col">0.07 TON</div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Service Fee</div>
+										<div class="nft-popup__content-col">0.01 TON</div>
+									</div>
+									<div class="nft-popup__content-title">Network Fee</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">The rest will be returned to your wallet</div>
+										<div class="nft-popup__content-col">0.3 TON</div>
+									</div>
+								</div>
+								<div class="nft-popup__error">
+									The wallet is not connected
+								</div>
+								<div class="nft-popup__message">
+									Please connect your wallet
+								</div>
+								<a href="" class="nft-popup__wallet">
+									<img src="img/icons/wallet.svg" class="nft-popup__wallet-src">
+									Connect your wallet
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="popup-2" aria-hidden="true" class="popup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<div class="popup__title">
+							<span>Buy NFT</span>
+							<button data-close type="button" class="popup__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+									<path d="M10.1111 0.500001L13 3.38889L2.88889 13.5L4.6614e-07 10.6111L10.1111 0.500001Z" fill="#6D879A" />
+									<path d="M13 10.6111L10.1111 13.5L0 3.38889L2.88889 0.5L13 10.6111Z" fill="#6D879A" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup__text">
+							<div class="nft-popup">
+								<div class="nft-popup__head">
+									<div class="nft-popup__head-image _violet">
+										<div class="nft-popup__head-image-text">?</div>
+									</div>
+									<div class="nft-popup__head-content">
+										<div class="nft-popup__head-title">BUMS hat</div>
+										<div class="nft-popup__head-subtitle">BUMS hat Collection</div>
+									</div>
+								</div>
+								<div class="nft-popup__content">
+									<div class="nft-popup__content-title">NFT Price</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Includes service fee and creator</div>
+										<div class="nft-popup__content-col"><span class="_big">0.35 TON</span></div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Creator Royalties</div>
+										<div class="nft-popup__content-col">0.07 TON</div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Service Fee</div>
+										<div class="nft-popup__content-col">0.01 TON</div>
+									</div>
+									<div class="nft-popup__content-title">Network Fee</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">The rest will be returned to your wallet</div>
+										<div class="nft-popup__content-col">0.3 TON</div>
+									</div>
+								</div>
+								<div class="nft-popup__error">
+									There are not enough funds in your account
+								</div>
+								<div class="nft-popup__message">
+									Please top up your account
+								</div>
+								<a href="" class="nft-popup__mint button _disabled">
+									MINT
+								</a>
+								<button class="nft-popup__wallet">
+									<img src="img/icons/wallet.svg" class="nft-popup__wallet-src">
+									Go to wallet
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="popup-3" aria-hidden="true" class="popup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<div class="popup__title">
+							<span>Buy NFT</span>
+							<button data-close type="button" class="popup__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+									<path d="M10.1111 0.500001L13 3.38889L2.88889 13.5L4.6614e-07 10.6111L10.1111 0.500001Z" fill="#6D879A" />
+									<path d="M13 10.6111L10.1111 13.5L0 3.38889L2.88889 0.5L13 10.6111Z" fill="#6D879A" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup__text">
+							<div class="nft-popup">
+								<div class="nft-popup__head">
+									<div class="nft-popup__head-image _violet">
+										<div class="nft-popup__head-image-text">?</div>
+									</div>
+									<div class="nft-popup__head-content">
+										<div class="nft-popup__head-title">BUMS hat</div>
+										<div class="nft-popup__head-subtitle">BUMS hat Collection</div>
+									</div>
+								</div>
+								<div class="nft-popup__content">
+									<div class="nft-popup__content-title">NFT Price</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Includes service fee and creator</div>
+										<div class="nft-popup__content-col"><span class="_big">0.35 TON</span></div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Creator Royalties</div>
+										<div class="nft-popup__content-col">0.07 TON</div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Service Fee</div>
+										<div class="nft-popup__content-col">0.01 TON</div>
+									</div>
+									<div class="nft-popup__content-title">Network Fee</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">The rest will be returned to your wallet</div>
+										<div class="nft-popup__content-col">0.3 TON</div>
+									</div>
+								</div>
+								<button class="nft-popup__button button">
+									MINT for <b>&nbsp; 0.65 &nbsp;</b> ton
+								</button>
+								<div class="nft-popup__balance">
+									Your balance
+									<span>
+										<img src="img/icons/ton.svg" class="nft-popup__balance-src">
+										1.15
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="popup-4" aria-hidden="true" class="popup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<div class="popup__title">
+							<span>Buy NFT</span>
+							<button data-close type="button" class="popup__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+									<path d="M10.1111 0.500001L13 3.38889L2.88889 13.5L4.6614e-07 10.6111L10.1111 0.500001Z" fill="#6D879A" />
+									<path d="M13 10.6111L10.1111 13.5L0 3.38889L2.88889 0.5L13 10.6111Z" fill="#6D879A" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup__text">
+							<div class="nft-popup">
+								<div class="nft-popup__head">
+									<div class="nft-popup__head-image _violet">
+										<div class="nft-popup__head-image-text">?</div>
+									</div>
+									<div class="nft-popup__head-content">
+										<div class="nft-popup__head-title">BUMS hat</div>
+										<div class="nft-popup__head-subtitle">BUMS hat Collection</div>
+									</div>
+								</div>
+								<div class="nft-popup__content">
+									<div class="nft-popup__content-title">NFT Price</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Includes service fee and creator</div>
+										<div class="nft-popup__content-col"><span class="_big">0.35 TON</span></div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Creator Royalties</div>
+										<div class="nft-popup__content-col">0.07 TON</div>
+									</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">Service Fee</div>
+										<div class="nft-popup__content-col">0.01 TON</div>
+									</div>
+									<div class="nft-popup__content-title">Network Fee</div>
+									<div class="nft-popup__content-row">
+										<div class="nft-popup__content-col">The rest will be returned to your wallet</div>
+										<div class="nft-popup__content-col">0.3 TON</div>
+									</div>
+								</div>
+								<div class="nft-popup__status">
+									<img src="img/icons/status-waiting.svg" class="_rotate">
+								</div>
+								<div class="nft-popup__status">
+									<img src="img/icons/status-confirmed.svg" class="">
+								</div>
+								<div class="nft-popup__status">
+									<img src="img/icons/status-error.svg" class="">
+								</div>
+								<div class="nft-popup__balance">
+									Your balance
+									<span>
+										<img src="img/icons/ton.svg" class="nft-popup__balance-src">
+										1.15
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="__container">
+				<div class="footer__wrapper">
+					<div class="footer__menu">
+						<a href="" class="footer__menu-item">FAQ</a>
+						<a href="" class="footer__menu-item">Press-kit</a>
+						<a href="" class="footer__menu-item">About</a>
+						<a href="" class="footer__menu-item">Privacy Policy</a>
+						<a href="" class="footer__menu-item">Terms of use</a>
+						<a href="" class="footer__menu-item">Rules and Legal section</a>
+					</div>
+					<div class="footer__social-media">
+						<a href="" class="footer__social-media-link">
+							<img src="img/icons/telegram.svg" class="footer__social-media-icon">
+						</a>
+						<a href="" class="footer__social-media-link">
+							<img src="img/icons/X.svg" class="footer__social-media-icon">
+						</a>
+						<a href="" class="footer__social-media-link">
+							<img src="img/icons/youtube.svg" class="footer__social-media-icon">
+						</a>
+						<a href="" class="footer__social-media-link">
+							<img src="img/icons/tiktok.svg" class="footer__social-media-icon">
+						</a>
+					</div>
+					<div class="footer__copyrights">
+						<a href="">
+							<img src="img/logotypes/nexusverse.svg">
+						</a>
+						2025
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20250203124156"></script>
+</body>
+
+</html>
