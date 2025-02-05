@@ -5,12 +5,12 @@
 	<title>Home Page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250203124156">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250205091355">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250203124156" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250205091355" rel="stylesheet">
 </head>
 
 <body>
@@ -57,7 +57,10 @@
 		<main class="page">
 			<section class="hero">
 				<div class="hero__background">
-					<img src="img/backgrounds/hero__plane.webp" class="hero__background-plane">
+					<picture>
+						<source srcset="img/backgrounds/hero__plane-2k.webp" media="(min-width: 1400px)">
+						<img src="img/backgrounds/hero__plane-hd.webp" class="hero__background-plane">
+					</picture>
 				</div>
 				<div class="__container">
 					<div class="hero__content">
@@ -69,7 +72,10 @@
 						<img src="img/logotypes/logo.webp" class="hero__logo-src">
 					</div>
 					<div class="hero__image">
-						<img src="img/content/hero__man.webp" class="hero__image-src">
+						<picture>
+							<source srcset="img/content/hero__man-2k.webp" media="(min-width: 1400px)">
+							<img src="img/content/hero__man-hd.webp" class="hero__image-src">
+						</picture>
 					</div>
 				</div>
 				<button class="arrow-down" data-goto=".legends"><img src="img/icons/arrow__down.svg" class="arrow-down__img"></button>
@@ -432,7 +438,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250203124156"></script>
+	<script src="js/app.min.js?_v=20250205091355"></script>
 </body>
 
 </html>

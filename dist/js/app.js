@@ -4207,7 +4207,8 @@
     da.init();
     function updatePopupContentStyles() {
         if (window.innerWidth < 768) document.querySelectorAll(".popup__content").forEach((popup => {
-            const height = popup.offsetHeight;
+            popup.style.removeProperty("height");
+            const height = popup.scrollHeight * 1.16;
             popup.style.setProperty("height", `${height}px`);
             popup.style.bottom = `-${height}px`;
         })); else document.querySelectorAll(".popup__content").forEach((popup => {
@@ -4217,6 +4218,37 @@
     }
     document.addEventListener("DOMContentLoaded", updatePopupContentStyles);
     window.addEventListener("resize", updatePopupContentStyles);
+    document.addEventListener("DOMContentLoaded", (function() {
+        document.querySelectorAll(".nft-popup__address-button").forEach((button => {
+            button.addEventListener("click", (function() {
+                const addressInfo = this.closest(".nft-popup__address-info");
+                const addressCode = addressInfo.querySelector(".nft-popup__address-code").textContent;
+                if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(addressCode).then((() => showTooltip(addressInfo))); else {
+                    const textarea = document.createElement("textarea");
+                    textarea.value = addressCode;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(textarea);
+                    showTooltip(addressInfo);
+                }
+            }));
+        }));
+        function showTooltip(container) {
+            let tooltip = container.querySelector(".copy-tooltip");
+            if (!tooltip) {
+                tooltip = document.createElement("div");
+                tooltip.className = "copy-tooltip";
+                tooltip.textContent = "Copied!";
+                container.appendChild(tooltip);
+            }
+            tooltip.classList.add("visible");
+            setTimeout((() => {
+                tooltip.classList.remove("visible");
+                setTimeout((() => tooltip.remove()), 300);
+            }), 2e3);
+        }
+    }));
     window["FLS"] = true;
     menuInit();
     spollers();

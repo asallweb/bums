@@ -5,12 +5,12 @@
 	<title>Popups</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250203124156">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250205091355">
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250203124156" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250205091355" rel="stylesheet">
 </head>
 
 <body>
@@ -55,11 +55,12 @@
 			</div>
 		</header>
 		<main class="page">
-			<div style="display: flex; gap: 20px; margin: 100px auto;	justify-content: center;">
-			<a href="" data-popup="#popup-1" class="nft-detail__button button">Popup 1</a>
-			<a href="" data-popup="#popup-2" class="nft-detail__button button">Popup 2</a>
-			<a href="" data-popup="#popup-3" class="nft-detail__button button">Popup 3</a>
-			<a href="" data-popup="#popup-4" class="nft-detail__button button">Popup 4</a>
+			<div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 100px auto;	justify-content: center; height: 500px; align-items: center;">
+				<a href="" data-popup="#popup-1" class="nft-detail__button button">Popup 1</a>
+				<a href="" data-popup="#popup-2" class="nft-detail__button button">Popup 2</a>
+				<a href="" data-popup="#popup-3" class="nft-detail__button button">Popup 3</a>
+				<a href="" data-popup="#popup-4" class="nft-detail__button button">Popup 4</a>
+				<a href="" data-popup="#popup-5" class="nft-detail__button button">Popup 5</a>
 			</div>
 			<div id="popup-1" aria-hidden="true" class="popup">
 				<div class="popup__wrapper">
@@ -302,6 +303,41 @@
 					</div>
 				</div>
 			</div>
+			<div id="popup-5" aria-hidden="true" class="popup">
+				<div class="popup__wrapper">
+					<div class="popup__content">
+						<div class="popup__title">
+							<span>Wallet Connected</span>
+							<button data-close type="button" class="popup__close">
+								<svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
+									<path d="M10.1111 0.500001L13 3.38889L2.88889 13.5L4.6614e-07 10.6111L10.1111 0.500001Z" fill="#6D879A" />
+									<path d="M13 10.6111L10.1111 13.5L0 3.38889L2.88889 0.5L13 10.6111Z" fill="#6D879A" />
+								</svg>
+							</button>
+						</div>
+						<div class="popup__text">
+							<div class="nft-popup">
+								<div class="nft-popup__wallet-icon">
+									<img src="img/icons/wallet-blue.svg" class="nft-popup__wallet-icon-src">
+								</div>
+								<div class="nft-popup__address">
+									<div class="nft-popup__address-name">Address:</div>
+									<div class="nft-popup__address-info">
+										<span class="nft-popup__address-code">0:833eb54867373h6883bn...0x45gr1</span>
+										<button class="nft-popup__address-button">
+											<img src="img/icons/copy.svg" class="nft-popup__address-button-src">
+										</button>
+									</div>
+								</div>
+								<a href="" class="nft-popup__wallet _red">
+									<img src="img/icons/wallet.svg" class="nft-popup__wallet-src">
+									Disconnect your wallet
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="__container">
@@ -338,7 +374,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250203124156"></script>
+	<script src="js/app.min.js?_v=20250205091355"></script>
 </body>
 
 </html>

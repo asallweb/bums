@@ -388,6 +388,22 @@ hr {
     transform: rotate(360deg)
   }
 }
+.copy-tooltip {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0,0,0,.75);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity .3s;
+  right: -25px;
+  top: -30px
+}
+.copy-tooltip.visible {
+  opacity: 1
+}
 .header {
   position: relative;
   z-index: 3;
@@ -910,7 +926,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1
+  aspect-ratio: 1;
+  max-width: 100%
 }
 .nft-item__image._violet {
   background: #6c3cff
@@ -1281,6 +1298,14 @@ hr {
   width: 100%;
   margin-top: 20px
 }
+.nft-popup__wallet._red {
+  background: #e64646;
+  box-shadow: 0 1px 0 0 #ff8181 inset,0 4px 4px 0 rgba(0,0,0,.25)
+}
+.nft-popup__wallet._red:hover {
+  background: #ce3939;
+  color: #fff
+}
 .nft-popup__wallet:hover {
   background: #76c3ff;
   color: #00438f
@@ -1319,6 +1344,35 @@ hr {
 .nft-popup__status img._rotate {
   -webkit-animation: rotate 3s linear infinite;
   animation: rotate 3s linear infinite
+}
+.nft-popup__wallet-icon {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto
+}
+.nft-popup__address {
+  border-radius: 10px;
+  background: #ebebeb;
+  padding: 10px;
+  color: #002540;
+  font-weight: 600;
+  line-height: 1.2
+}
+.nft-popup__address-name {
+  margin-bottom: 5px
+}
+.nft-popup__address-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px
+}
+.nft-popup__address-code {
+  overflow: hidden
+}
+.nft-popup__address-button {
+  flex: 0 0 24px
 }
 .get-more {
   position: relative
@@ -1760,6 +1814,9 @@ hr {
   }
   .nft-popup__content-col:first-child {
     font-size: .875rem
+  }
+  .nft-popup__address {
+    font-size: 1.125rem
   }
   .get-more {
     margin-top: 3.125rem
@@ -2222,6 +2279,9 @@ hr {
   }
   .nft-popup__content-col:first-child {
     font-size: .75rem
+  }
+  .nft-popup__address {
+    font-size: .9375rem
   }
   .get-more {
     margin-top: 1.875rem
@@ -2951,6 +3011,9 @@ hr {
   }
   .nft-popup__content-col:first-child {
     font-size: clamp(.75rem ,.7088477366rem + .2057613169vw ,.875rem)
+  }
+  .nft-popup__address {
+    font-size: clamp(.9375rem ,.8757716049rem + .3086419753vw ,1.125rem)
   }
   .get-more {
     margin-top: clamp(1.875rem ,1.4634773663rem + 2.0576131687vw ,3.125rem)
