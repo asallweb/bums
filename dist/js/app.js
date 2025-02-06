@@ -4244,6 +4244,14 @@
             }), 2e3);
         }
     }));
+    function setSquareSize() {
+        document.querySelectorAll(".nft-item__image").forEach((el => {
+            let width = el.offsetWidth;
+            el.style.height = `${width}px`;
+        }));
+    }
+    window.addEventListener("load", setSquareSize);
+    window.addEventListener("resize", setSquareSize);
     window["FLS"] = true;
     menuInit();
     spollers();

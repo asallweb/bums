@@ -927,7 +927,7 @@ hr {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  max-width: 100%
+  width: 100%
 }
 .nft-item__image._violet {
   background: #6c3cff
@@ -938,7 +938,9 @@ hr {
 .nft-item__image-src {
   max-width: 100%;
   max-height: 100%;
-  height: auto
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover
 }
 .nft-item__tooltip {
   position: absolute
@@ -2526,6 +2528,10 @@ hr {
   .exclusive__title {
     text-shadow: 2px 2px 0 rgba(0,37,64,.5)
   }
+  .exclusive__list {
+    overflow-x: auto;
+    padding-bottom: 15px
+  }
   .hot__title {
     text-shadow: 2px 2px 0 rgba(0,37,64,.5)
   }
@@ -2612,6 +2618,9 @@ hr {
   }
 }
 @media (max-width:47.99875em)and (max-width:20em) {
+  .exclusive__get-nft {
+    margin-top: .3125rem
+  }
   .hot .swiper-wrapper {
     gap: .8125rem
   }
@@ -3032,11 +3041,17 @@ hr {
   }
 }
 @media (max-width:47.99875em)and (min-width:80.75em) {
+  .exclusive__get-nft {
+    margin-top: 3.125rem
+  }
   .hot .swiper-wrapper {
     gap: 1.4375rem
   }
 }
 @media (max-width:47.99875em)and (min-width:20em)and (max-width:80.75em) {
+  .exclusive__get-nft {
+    margin-top: clamp(.3125rem ,-.6134259259rem + 4.6296296296vw ,3.125rem)
+  }
   .hot .swiper-wrapper {
     gap: clamp(.8125rem ,.6067386831rem + 1.0288065844vw ,1.4375rem)
   }
