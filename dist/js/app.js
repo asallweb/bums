@@ -4250,6 +4250,7 @@
             el.style.height = `${width}px`;
         }));
     }
+    document.addEventListener("DOMContentLoaded", setSquareSize);
     window.addEventListener("load", setSquareSize);
     window.addEventListener("resize", setSquareSize);
     window["FLS"] = true;
