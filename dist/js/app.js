@@ -4202,7 +4202,7 @@
     function updatePopupContentStyles() {
         if (window.innerWidth < 768) document.querySelectorAll(".popup__content").forEach((popup => {
             popup.style.removeProperty("height");
-            const height = popup.scrollHeight * 1.16;
+            const height = popup.offsetHeight * 1.02;
             popup.style.setProperty("height", `${height}px`);
             popup.style.bottom = `-${height}px`;
         })); else document.querySelectorAll(".popup__content").forEach((popup => {
@@ -4211,6 +4211,7 @@
         }));
     }
     document.addEventListener("DOMContentLoaded", updatePopupContentStyles);
+    window.addEventListener("load", updatePopupContentStyles);
     window.addEventListener("resize", updatePopupContentStyles);
     document.addEventListener("DOMContentLoaded", (function() {
         document.querySelectorAll(".nft-popup__address-button").forEach((button => {
