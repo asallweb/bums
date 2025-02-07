@@ -70,10 +70,13 @@ h6 {
   font-size: inherit
 }
 .lock body {
-  overflow: hidden;
-  touch-action: none;
-  -ms-scroll-chaining: none;
-  overscroll-behavior: none
+  overflow: hidden!important;
+  touch-action: none!important;
+  -ms-scroll-chaining: none!important;
+  overscroll-behavior: none!important;
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed
 }
 .wrapper {
   min-height: 100%;
@@ -318,18 +321,16 @@ body {
 .slider-button._next {
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
-  right: 26px
+  right: -32px
 }
 .slider-button._prev {
-  left: 26px
+  left: -36px
 }
 .slider-button:hover {
   opacity: .8
 }
 .swiper-pagination {
-  position: absolute;
-  z-index: 2;
-  bottom: -18px;
+  margin-top: 18px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -703,13 +704,11 @@ hr {
   font-weight: 600;
   line-height: 1.2
 }
-.hot__slider-wrapper {
-  position: relative;
-  left: 0;
-  width: calc(100vw - (100vw - 1268px)/ 2)
-}
 .hot__slider {
   padding-bottom: 5px
+}
+.hot__slide {
+  max-width: 618px
 }
 .hot__grid {
   height: 100%;
@@ -729,7 +728,7 @@ hr {
   border-radius: 16px;
   height: 100%;
   width: 50vw;
-  max-width: 634px
+  max-width: 618px
 }
 .nft-collection__image {
   position: relative
@@ -941,7 +940,7 @@ hr {
   background: rgba(248,248,248,.5);
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: flex-start
 }
 .nft-item__image {
   position: relative;
@@ -1600,7 +1599,7 @@ hr {
     margin-bottom: 3rem
   }
   .hot__grid {
-    gap: 1.4375rem
+    gap: 1.375rem
   }
   .nft-collection {
     gap: 1.5rem
@@ -1853,6 +1852,16 @@ hr {
     margin-bottom: 3.125rem
   }
 }
+@media (max-width:1360px) {
+  .slider-button {
+    display: none
+  }
+}
+@media (max-width:1290px) {
+  .hot__slider-wrapper {
+    margin-right: -12px
+  }
+}
 @media (max-width:1080px) {
   .header__logo {
     padding: 25px 0
@@ -2034,7 +2043,7 @@ hr {
     margin-bottom: 1.25rem
   }
   .hot__grid {
-    gap: .8125rem
+    gap: .75rem
   }
   .nft-collection {
     gap: .375rem
@@ -2525,6 +2534,9 @@ hr {
   .hot__title {
     text-shadow: 2px 2px 0 rgba(0,37,64,.5)
   }
+  .hot__slider-wrapper {
+    margin-right: 0
+  }
   .hot .slider-button,
   .hot .swiper-pagination,
   .hot__subtitle br {
@@ -2537,12 +2549,9 @@ hr {
     width: 100%;
     max-width: 100%
   }
-  .hot__slider-wrapper {
-    left: auto;
-    width: 100%
-  }
   .hot .swiper-wrapper {
-    flex-direction: column
+    flex-direction: column;
+    align-items: center
   }
   .nft-collection__name {
     text-shadow: 2px 2px 0 rgba(0,37,64,.5)
@@ -2790,7 +2799,7 @@ hr {
     margin-bottom: clamp(1.25rem ,.6738683128rem + 2.8806584362vw ,3rem)
   }
   .hot__grid {
-    gap: clamp(.8125rem ,.6067386831rem + 1.0288065844vw ,1.4375rem)
+    gap: clamp(.75rem ,.5442386831rem + 1.0288065844vw ,1.375rem)
   }
   .nft-collection {
     gap: clamp(.375rem ,.0046296296rem + 1.8518518519vw ,1.5rem)
