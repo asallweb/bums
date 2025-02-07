@@ -5,7 +5,7 @@
 	<title>Home Page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250207131030">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250207195749">
 	<link rel="icon" href="files/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="files/favicon-16x16.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="files/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250207131030" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250207195749" rel="stylesheet">
 </head>
 
 <body>
@@ -83,383 +83,512 @@
 						</picture>
 					</div>
 				</div>
-				<button class="arrow-down" data-goto=".legends"><img src="img/icons/arrow__down.svg" class="arrow-down__img"></button>
+				<button class="arrow-down" data-goto=".success"><img src="img/icons/arrow__down.svg" class="arrow-down__img"></button>
 			</section>
-			<section class="legends">
-				<div class="__container">
-					<div class="legends__title">become a part <br> of the bums legends</div>
-					<div class="legends__list">
-						<div class="legends__item">
-							<div class="legends__item-title">bums members</div>
-							<div class="legends__item-number">10m+</div>
+			<div class="dark-bg-wrapper">
+				<div class="dark-bg-wrapper__inner">
+					<section class="unique">
+						<div class="__container">
+							<div class="unique__title">get unique Bums Hat NFT</div>
+							<div class="unique__subtitle">The rarer the combination, the more valuable the hat! <br> Buy 1 for 10 TON and wait for reveal to see it's rareness!</div>
+							<div class="unique__list">
+								<div class="unique__item">
+									<div class="unique__item-title">Remaining</div>
+									<div class="unique__item-number">2367/<b>5120</b></div>
+								</div>
+								<div class="unique__item">
+									<div class="unique__item-title">time before mint</div>
+									<div class="unique__item-number _timer"><b>23:59:59</b></div>
+									<script>
+										document.addEventListener("DOMContentLoaded", function() {
+											const timerElement = document.querySelector(".unique__item-number._timer b");
+
+											function startCountdown() {
+												let [hours, minutes, seconds] = timerElement.innerText.split(":").map(Number);
+												let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+												function updateTimer() {
+													if (totalSeconds <= 0) return;
+													totalSeconds--;
+
+													let h = Math.floor(totalSeconds / 3600).toString().padStart(2, "0");
+													let m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, "0");
+													let s = (totalSeconds % 60).toString().padStart(2, "0");
+
+													timerElement.innerText = `${h}:${m}:${s}`;
+													if (totalSeconds > 0) {
+														setTimeout(updateTimer, 1000);
+													}
+												}
+
+												updateTimer();
+											}
+
+											startCountdown();
+										});
+									</script>
+								</div>
+								<div class="unique__item">
+									<div class="unique__item-title">Price</div>
+									<div class="unique__item-number"><b>10 ton</b></div>
+								</div>
+							</div>
+							<a href="" class="unique__get-nft get-nft button">get your unique NFT</a>
 						</div>
-						<div class="legends__item">
-							<div class="legends__item-title">nft solds</div>
-							<div class="legends__item-number">1m+</div>
-						</div>
-						<div class="legends__item">
-							<div class="legends__item-title">traits unlocked</div>
-							<div class="legends__item-number">400k</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="exclusive">
-				<div class="exclusive__inner">
+					</section>
 					<div class="__container">
-						<div class="exclusive__title">Fresh & Exclusive!</div>
-						<div class="exclusive__subtitle">Discover the latest NFT collections and merch before anyone else. <br> Grab yours while they last!</div>
+						<hr>
 					</div>
-					<div class="exclusive__list">
-						<div class="nft-item">
-							<div class="nft-item__image _violet">
-								<img src="img/content/product-1.webp" class="nft-item__image-src">
-								<div class="nft-item__tooltip">
-									<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+					<section class="how-it-works">
+						<div class="__container">
+							<div class="how-it-works__title">how it works</div>
+							<div class="how-it-works__subtitle">3 grades of attributes:</div>
+							<div class="how-it-works__list">
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Common</div>
+								</div>
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Rare</div>
+								</div>
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Epic</div>
 								</div>
 							</div>
-							<div class="nft-item__title">red hat redemption</div>
-
-						</div>
-						<div class="nft-item">
-							<div class="nft-item__image _violet">
-								<img src="img/content/product-2.webp" class="nft-item__image-src">
-								<div class="nft-item__tooltip">
-									<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+							<div class="how-it-works__subtitle">4 Sets of attributes:</div>
+							<div class="how-it-works__list _with-symbols">
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Background</div>
+								</div>
+								<div class="how-it-works__item-symbol">+</div>
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Symbol</div>
+								</div>
+								<div class="how-it-works__item-symbol">+</div>
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Hat</div>
+								</div>
+								<div class="how-it-works__item-symbol">+</div>
+								<div class="how-it-works__item">
+									<div class="how-it-works__item-title">Detail</div>
 								</div>
 							</div>
-							<div class="nft-item__title">red hat redemption</div>
-
-						</div>
-						<div class="nft-item">
-							<div class="nft-item__image _violet">
-								<img src="img/content/product-3.webp" class="nft-item__image-src">
-								<div class="nft-item__tooltip">
-									<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+							<div class="how-it-works__subtitle">reveal</div>
+							<div class="how-it-works__text">Each token is randomly generated from a set of rare attributes: <br> <b>Background, Symbol, Hat, Detail</b> — all contribute to the uniqueness and value of the token</div>
+							<div class="how-it-works__fromTo">
+								<div class="how-it-works__fromTo-item">
+									<div class="how-it-works__fromTo-item-image _green">?</div>
+								</div>
+								<div class="how-it-works__fromTo-item">
+									<div class="how-it-works__fromTo-item-arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="52" height="31" viewBox="0 0 52 31" fill="none" class="_desktop">
+											<path d="M51.4142 16.9142C52.1953 16.1332 52.1953 14.8668 51.4142 14.0858L38.6863 1.35786C37.9052 0.576816 36.6389 0.576816 35.8579 1.35786C35.0768 2.13891 35.0768 3.40524 35.8579 4.18629L47.1716 15.5L35.8579 26.8137C35.0768 27.5948 35.0768 28.8611 35.8579 29.6421C36.6389 30.4232 37.9052 30.4232 38.6863 29.6421L51.4142 16.9142ZM0 17.5H50V13.5H0L0 17.5Z" fill="white" />
+										</svg>
+										<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none" class="_mobile">
+											<path d="M30.4142 16.9142C31.1953 16.1332 31.1953 14.8668 30.4142 14.0858L17.6863 1.35786C16.9052 0.576816 15.6389 0.576816 14.8579 1.35786C14.0768 2.13891 14.0768 3.40524 14.8579 4.18629L26.1716 15.5L14.8579 26.8137C14.0768 27.5948 14.0768 28.8611 14.8579 29.6421C15.6389 30.4232 16.9052 30.4232 17.6863 29.6421L30.4142 16.9142ZM0 17.5H29V13.5H0L0 17.5Z" fill="white" />
+										</svg>
+									</div>
+								</div>
+								<div class="how-it-works__fromTo-item">
+									<div class="how-it-works__fromTo-item-image">
+										<img src="img/content/fromTo-img.webp" class="how-it-works__fromTo-item-src">
+									</div>
 								</div>
 							</div>
-							<div class="nft-item__title">red hat redemption</div>
-
-
 						</div>
+					</section>
+				</div>
+			</div>
+			<section class="success">
+				<div class="__container">
+					<div class="success__title">mr. durov nft launch success</div>
+					<div class="success__subtitle">The first NFT collection was successfully launched on the getgems.io platform!</div>
+					<div class="success__images-list">
+						<div class="success__images-item">
+							<img src="img/content/success-1.webp" class="success__images-src">
+						</div>
+						<div class="success__images-item">
+							<img src="img/content/success-2.webp" class="success__images-src">
+						</div>
+						<div class="success__images-item">
+							<img src="img/content/success-3.webp" class="success__images-src">
+						</div>
+					</div>
+					<div class="success__subtitle">First sales statistics are impressive</div>
+					<div class="success__list">
+						<div class="success__item">
+							<div class="success__item-title">avg token price</div>
+							<div class="success__item-number">11 ton</div>
+						</div>
+						<div class="success__item">
+							<div class="success__item-title">tokens minted</div>
+							<div class="success__item-number">3.6k+</div>
+						</div>
+						<div class="success__item">
+							<div class="success__item-title">total volume</div>
+							<div class="success__item-number">5k ton</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="__container">
+				<hr>
+			</div>
+			<!-- <section class="exclusive">
+					<div class="exclusive__inner">
+						<div class="__container">
+							<div class="exclusive__title">Fresh & Exclusive!</div>
+							<div class="exclusive__subtitle">Discover the latest NFT collections and merch before anyone else. <br> Grab yours while they last!</div>
+						</div>
+						<div class="exclusive__list">
+							<div class="nft-item">
+								<div class="nft-item__image _violet">
+									<img src="img/content/product-1.webp" class="nft-item__image-src">
+									<div class="nft-item__tooltip">
+										<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									</div>
+								</div>
+								<div class="nft-item__title">red hat redemption</div>
+
+							</div>
+							<div class="nft-item">
+								<div class="nft-item__image _violet">
+									<img src="img/content/product-2.webp" class="nft-item__image-src">
+									<div class="nft-item__tooltip">
+										<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									</div>
+								</div>
+								<div class="nft-item__title">red hat redemption</div>
+
+							</div>
+							<div class="nft-item">
+								<div class="nft-item__image _violet">
+									<img src="img/content/product-3.webp" class="nft-item__image-src">
+									<div class="nft-item__tooltip">
+										<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									</div>
+								</div>
+								<div class="nft-item__title">red hat redemption</div>
+
+
+							</div>
+						</div>
+						<div class="__container">
+							<a href="" class="exclusive__get-nft get-nft button">get your unique NFT</a>
+						</div>
+					</div>
+				</section> -->
+			<!-- <section class="hot">
+					<div class="__container">
+						<div class="hot__title">What’s Hot Right Now!</div>
+						<div class="hot__subtitle">Check out the most popular NFTs and merch that everyone is talking about. <br> Don’t miss out on the hype!</div>
 					</div>
 					<div class="__container">
-						<a href="" class="exclusive__get-nft get-nft button">get your unique NFT</a>
-					</div>
-				</div>
-			</section>
-			<section class="hot">
-				<div class="__container">
-					<div class="hot__title">What’s Hot Right Now!</div>
-					<div class="hot__subtitle">Check out the most popular NFTs and merch that everyone is talking about. <br> Don’t miss out on the hype!</div>
-				</div>
-				<div class="__container">
-					<button class="hot__slider-button-prev slider-button _prev"></button>
-					<div class="hot__slider-wrapper">
-						<div class="hot__slider swiper">
-							<div class="hot__wrapper swiper-wrapper">
-								<div class="hot__slide swiper-slide">
-									<div class="nft-collection">
-										<div class="nft-collection__image">
-											<img src="img/content/nft-collection.webp" class="nft-collection__image-src">
-											<div class="nft-collection__tooltip">
-												<img src="img/content/product-tooltip.webp" class="nft-collection__tooltip-src">
+						<button class="hot__slider-button-prev slider-button _prev"></button>
+						<div class="hot__slider-wrapper">
+							<div class="hot__slider swiper">
+								<div class="hot__wrapper swiper-wrapper">
+									<div class="hot__slide swiper-slide">
+										<div class="nft-collection">
+											<div class="nft-collection__image">
+												<img src="img/content/nft-collection.webp" class="nft-collection__image-src">
+												<div class="nft-collection__tooltip">
+													<img src="img/content/product-tooltip.webp" class="nft-collection__tooltip-src">
+												</div>
 											</div>
-										</div>
-										<div class="nft-collection__info">
-											<div class="nft-collection__title">nft collection</div>
-											<div class="nft-collection__name">Jackie Chan</div>
-										</div>
-										<div class="nft-collection__button-wrapper">
-											<a href="" class="nft-collection__button button">Shop Now</a>
+											<div class="nft-collection__info">
+												<div class="nft-collection__title">nft collection</div>
+												<div class="nft-collection__name">Jackie Chan</div>
+											</div>
+											<div class="nft-collection__button-wrapper">
+												<a href="" class="nft-collection__button button">Shop Now</a>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
+												<div class="nft-item__title">red hat redemption</div>
 
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
+												<div class="nft-item__title">red hat redemption</div>
 
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
+												<div class="nft-item__title">red hat redemption</div>
 
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-										</div>
-									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
+												<div class="nft-item__title">red hat redemption</div>
+															</div>
 										</div>
 									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
+												<div class="nft-item__title">red hat redemption</div>
 
 
-										</div>
-									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
-												</div>
-											</div>
-											<div class="nft-item__title">red hat redemption</div>
 										</div>
 									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
 										</div>
 									</div>
-								</div>
-								<div class="hot__slide swiper-slide">
-									<div class="hot__grid">
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-6.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
 
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
 
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
+															</div>
 										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-7.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									</div>
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
 
 
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
+											</div>
 										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-4.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+									</div>
+									<div class="hot__slide swiper-slide">
+										<div class="hot__grid">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-6.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
-
-
-										</div>
-										<div class="nft-item">
-											<div class="nft-item__image _violet">
-												<img src="img/content/product-5.webp" class="nft-item__image-src">
-												<div class="nft-item__tooltip">
-													<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-7.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
 												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
 											</div>
-											<div class="nft-item__title">red hat redemption</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-4.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
 
 
+											</div>
+											<div class="nft-item">
+												<div class="nft-item__image _violet">
+													<img src="img/content/product-5.webp" class="nft-item__image-src">
+													<div class="nft-item__tooltip">
+														<img src="img/content/product-tooltip.webp" class="nft-item__tooltip-src">
+													</div>
+												</div>
+												<div class="nft-item__title">red hat redemption</div>
+
+
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<button class="hot__slider-button-next slider-button _next"></button>
+						<div class="swiper-pagination"></div>
 					</div>
-					<button class="hot__slider-button-next slider-button _next"></button>
-					<div class="swiper-pagination"></div>
-				</div>
-			</section>
+				</section> -->
 			<section class="release">
 				<div class="__container">
 					<div class="release__list">
@@ -555,7 +684,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250207131030"></script>
+	<script src="js/app.min.js?_v=20250207195749"></script>
 </body>
 
 </html>
