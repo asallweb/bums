@@ -438,7 +438,7 @@ hr {
   display: flex;
   align-items: center
 }
-.menu__item::before {
+.menu__item:not(._no-border)::before {
   content: "";
   position: absolute;
   left: -1px;
@@ -2778,6 +2778,9 @@ hr {
   }
   .menu__link._lang {
     font-weight: 400
+  }
+  .menu__link._w-auto {
+    width: auto
   }
   .menu__link-lang-desktop {
     display: none
