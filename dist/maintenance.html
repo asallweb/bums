@@ -5,7 +5,7 @@
 	<title>Заглушка</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250213150252">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250304201243">
 	<link rel="icon" href="files/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="files/favicon-16x16.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="files/favicon-32x32.png" sizes="32x32" type="image/png">
@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250213150252" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap&_v=20250304201243" rel="stylesheet">
 </head>
 
 <body class="_black">
@@ -26,29 +26,64 @@
 					<div class="maintenance__wrapper">
 						<div class="maintenance__header">
 							<div class="maintenance__title">jwls.io</div>
-							<div class="maintenance__subtitle">The 1st Telegram Miniapp asset trading platform across the entire network</div>
+							<div class="maintenance__subtitle">Collect 500+ diamonds in Bums and join the 1,000,000 diamond buyback at up to 0.25 USDT each</div>
+							<div class="maintenance__timer"><b>52:59:59</b></div>
 						</div>
+
 						<div class="maintenance__list">
 							<div class="maintenance__item">
 								<img src="img/logotypes/logo.svg" class="maintenance__item-bums">
 							</div>
 							<div class="maintenance__item">
-								<img src="img/logotypes/mine_dragons.svg" class="">
+								<img src="img/logotypes/mine_dragons.webp" style="max-width: 180px;">
 							</div>
 							<div class="maintenance__item">
-								<img src="img/logotypes/USDT.svg" class="">
+								<div class="maintenance__item-list">
+									<img src="img/logotypes/krypto-1.svg" class="">
+									<img src="img/logotypes/USDT.svg" class="">
+									<img src="img/logotypes/krypto-2.svg" class="">
+									<img src="img/logotypes/krypto-3.svg" class="">
+									<img src="img/logotypes/krypto-4.svg" class="">
+								</div>
 							</div>
 						</div>
 						<div class="maintenance__footer">
 							<div class="maintenance__subtitle">COMING SOON</div>
-							<div class="maintenance__date">maybe next Friday — 21/02 :)</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					const timerElement = document.querySelector(".maintenance__timer b");
+
+					function startCountdown() {
+						let [hours, minutes, seconds] = timerElement.innerText.split(":").map(Number);
+						let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+
+						function updateTimer() {
+							if (totalSeconds <= 0) return;
+							totalSeconds--;
+
+							let h = Math.floor(totalSeconds / 3600).toString().padStart(2, "0");
+							let m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, "0");
+							let s = (totalSeconds % 60).toString().padStart(2, "0");
+
+							timerElement.innerText = `${h}:${m}:${s}`;
+							if (totalSeconds > 0) {
+								setTimeout(updateTimer, 1000);
+							}
+						}
+
+						updateTimer();
+					}
+
+					startCountdown();
+				});
+			</script>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20250213150252"></script>
+	<script src="js/app.min.js?_v=20250304201243"></script>
 </body>
 
 </html>

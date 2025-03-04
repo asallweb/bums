@@ -1628,12 +1628,26 @@ hr {
 .maintenance__subtitle {
   color: #fff;
   font-weight: 600;
-  line-height: 1.2
+  line-height: 1.2;
+  max-width: 750px;
+  margin: 0 auto
+}
+.maintenance__timer {
+  color: #fff;
+  font-size: 84px
 }
 .maintenance__list {
   display: flex;
   flex-direction: column;
   margin-bottom: 100px
+}
+.maintenance__item-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  width: 245px;
+  margin: 0 auto
 }
 .maintenance__footer {
   display: flex;
@@ -2138,7 +2152,7 @@ hr {
     font-size: 3rem
   }
   .maintenance__header {
-    margin-bottom: 6.25rem
+    margin-bottom: 4.375rem
   }
   .maintenance__title {
     font-size: 3.375rem
@@ -2148,6 +2162,9 @@ hr {
   }
   .maintenance__subtitle {
     font-size: 1.5rem
+  }
+  .maintenance__timer {
+    margin-top: 3.125rem
   }
   .maintenance__list {
     gap: 1.5625rem
@@ -2667,7 +2684,7 @@ hr {
     font-size: 1.5rem
   }
   .maintenance__header {
-    margin-bottom: 3.125rem
+    margin-bottom: 1.875rem
   }
   .maintenance__title {
     font-size: 2.25rem
@@ -2677,6 +2694,9 @@ hr {
   }
   .maintenance__subtitle {
     font-size: 1.125rem
+  }
+  .maintenance__timer {
+    margin-top: 1.25rem
   }
   .maintenance__list {
     gap: .9375rem
@@ -3582,7 +3602,7 @@ hr {
     font-size: clamp(1.5rem ,1.0061728395rem + 2.4691358025vw ,3rem)
   }
   .maintenance__header {
-    margin-bottom: clamp(3.125rem ,2.0961934156rem + 5.1440329218vw ,6.25rem)
+    margin-bottom: clamp(1.875rem ,1.0519547325rem + 4.1152263374vw ,4.375rem)
   }
   .maintenance__title {
     font-size: clamp(2.25rem ,1.8796296296rem + 1.8518518519vw ,3.375rem)
@@ -3592,6 +3612,9 @@ hr {
   }
   .maintenance__subtitle {
     font-size: clamp(1.125rem ,1.0015432099rem + .6172839506vw ,1.5rem)
+  }
+  .maintenance__timer {
+    margin-top: clamp(1.25rem ,.6327160494rem + 3.0864197531vw ,3.125rem)
   }
   .maintenance__list {
     gap: clamp(.9375rem ,.7317386831rem + 1.0288065844vw ,1.5625rem)
